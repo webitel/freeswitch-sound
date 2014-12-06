@@ -9,5 +9,5 @@ ADD http://files-sync.freeswitch.org/freeswitch-sounds-$SND_NAME-16000-$SND_VERS
 ADD http://files-sync.freeswitch.org/freeswitch-sounds-$SND_NAME-32000-$SND_VERSION.tar.gz /
 ADD http://files-sync.freeswitch.org/freeswitch-sounds-$SND_NAME-48000-$SND_VERSION.tar.gz /
 
-VOLUME ["/sounds/ru"]
+VOLUME ["/sounds/en"]
 ENTRYPOINT ["true"]
