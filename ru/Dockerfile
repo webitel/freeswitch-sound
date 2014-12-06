@@ -1,4 +1,4 @@
-FROM progrium/busybox
+FROM busybox
 MAINTAINER Vitaly Kovalyshyn "v.kovalyshyn@webitel.com"
 
 ENV SND_VERSION 1.0.51
