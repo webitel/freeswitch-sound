@@ -7,13 +7,13 @@ ENV SND_NAME music
 RUN opkg-install curl \
 	&& mkdir -p /sounds \
     && curl -SL http://files-sync.freeswitch.org/freeswitch-sounds-$SND_NAME-8000-$SND_VERSION.tar.gz \
-    | tar -xJC /sounds \
+    | tar -xC /sounds \
     && curl -SL http://files-sync.freeswitch.org/freeswitch-sounds-$SND_NAME-16000-$SND_VERSION.tar.gz \
-    | tar -xJC /sounds \
+    | tar -xC /sounds \
     curl -SL http://files-sync.freeswitch.org/freeswitch-sounds-$SND_NAME-32000-$SND_VERSION.tar.gz \
-    | tar -xJC /sounds \
+    | tar -xC /sounds \
     curl -SL http://files-sync.freeswitch.org/freeswitch-sounds-$SND_NAME-48000-$SND_VERSION.tar.gz \
-    | tar -xJC /sounds
+    | tar -xC /sounds
 
 VOLUME ["/sounds/music"]
 ENTRYPOINT ["true"]
