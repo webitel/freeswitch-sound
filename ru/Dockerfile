@@ -6,7 +6,7 @@ ENV SND_NAME ru-RU-elena
 
 RUN apt-get -y --quiet update \
 	&& apt-get -y --quiet install curl \
-	&& rm -rf /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt/lists/* \
 	&& mkdir -p /sounds \
 	&& curl http://files-sync.freeswitch.org/freeswitch-sounds-$SND_NAME-8000-$SND_VERSION.tar.gz \
 	| tar zxf -C /sounds \
