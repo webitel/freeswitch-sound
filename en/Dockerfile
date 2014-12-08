@@ -1,10 +1,11 @@
-FROM debian:wheezy
+FROM progrium/busybox
 MAINTAINER Vitaly Kovalyshyn "v.kovalyshyn@webitel.com"
 
 ENV SND_VERSION 1.0.51
 ENV SND_NAME en-us-callie
 
-RUN mkdir -p /sounds \
+RUN opkg-install curl \
+	&& mkdir -p /sounds \
     && curl -SL http://files-sync.freeswitch.org/freeswitch-sounds-$SND_NAME-8000-$SND_VERSION.tar.gz \
     | tar -xJC /sounds \
     && curl -SL http://files-sync.freeswitch.org/freeswitch-sounds-$SND_NAME-16000-$SND_VERSION.tar.gz \
